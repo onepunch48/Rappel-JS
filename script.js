@@ -137,8 +137,17 @@ document.getElementById(
 
 // Exercice 9
 // Insérez votre code ici
-let values = [1, 2, 3, 4, 5, 6];
+let animals = ["Chat", "Panda", "Tigre", "Eléphant", "Pigeon", "Chien"];
 let listOutput = document.getElementById("listOutput");
+
+animals.forEach((animal) => {
+  // Crée un élément <li> pour chaque animal
+  let listItem = document.createElement("li");
+  listItem.innerHTML = `${animal}`;
+
+  // Ajoute l'élément <li> à l'élément avec l'ID "listOutput"
+  listOutput.appendChild(listItem);
+});
 // Exercice 10
 // Ne touchez pas au tableau
 const icons = [
