@@ -77,7 +77,7 @@ let car = {
   brand: "Mercedes",
   model: "C200",
   yearConstruct: 2003,
-  color: "Green",
+  color: "bleue",
   image:
     "https://images.ctfassets.net/uaddx06iwzdz/7qSj995ldz9FEndKl0OZyt/70af44b896204200227d48dd6cd72663/AS24-modelpagina-mercedes-c-200_07.jpg",
 };
@@ -141,12 +141,9 @@ let animals = ["Chat", "Panda", "Tigre", "Eléphant", "Pigeon", "Chien"];
 let listOutput = document.getElementById("listOutput");
 
 animals.forEach((animal) => {
-  // Crée un élément <li> pour chaque animal
-  let listItem = document.createElement("li");
-  listItem.innerHTML = `${animal}`;
-
-  // Ajoute l'élément <li> à l'élément avec l'ID "listOutput"
-  listOutput.appendChild(listItem);
+  let li = document.createElement("li");
+  li.innerHTML = `${animal}`;
+  listOutput.appendChild(li);
 });
 // Exercice 10
 // Ne touchez pas au tableau
@@ -163,6 +160,11 @@ const icons = [
 ];
 
 // Insérez votre code ici
+
+let logo = document.getElementById("logo");
+console.log(logo);
+let iconsLength = icons.length - 1;
+let randomNumber = Math.round(Math.random() * iconsLength);
 
 // Exercice 11 : Optionnel
 // Insérez votre code ici
