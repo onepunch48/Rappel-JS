@@ -163,8 +163,9 @@ const icons = [
 // Insérez votre code ici
 
 let logo = document.getElementById("logo");
-let iconsLength = icons.length - 1;
-let randomNumber = Math.round(Math.random() * iconsLength);
+let index = icons.length - 1;
+let randomIndex = Math.floor(Math.random() * index);
+let iconImage = document.getElementById("iconImage");
 
 // Exercice 11 : Optionnel
 // Insérez votre code ici
