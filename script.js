@@ -141,10 +141,11 @@ let animals = ["Chat", "Panda", "Tigre", "Eléphant", "Pigeon", "Chien"];
 let listOutput = document.getElementById("listOutput");
 
 animals.forEach((animal) => {
-  let li = document.createElement("li");
-  li.innerHTML = `${animal}`;
-  listOutput.appendChild(li);
+  listOutput.innerHTML += `
+  <li>${animal}</li>
+  `;
 });
+
 // Exercice 10
 // Ne touchez pas au tableau
 const icons = [
@@ -162,7 +163,6 @@ const icons = [
 // Insérez votre code ici
 
 let logo = document.getElementById("logo");
-console.log(logo);
 let iconsLength = icons.length - 1;
 let randomNumber = Math.round(Math.random() * iconsLength);
 
