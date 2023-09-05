@@ -162,10 +162,14 @@ const icons = [
 
 // Insérez votre code ici
 
-let logo = document.getElementById("logo");
-let index = icons.length - 1;
-let randomIndex = Math.floor(Math.random() * index);
-let iconImage = document.getElementById("iconImage");
+const logo = document.getElementById("logo");
+const iconImage = document.getElementById("iconImage");
+const indexIcon = icons.length - 1;
+const randomIndex = Math.floor(Math.random() * indexIcon);
+const linkImg = `./img/${icons[randomIndex]}.svg`;
+// const linkImg = "./img/" + icons[randomIndex] + ".svg";
+iconImage.src = linkImg;
+console.log(linkImg);
 
 // Exercice 11 : Optionnel
 // Insérez votre code ici
