@@ -169,7 +169,21 @@ const randomIndex = Math.floor(Math.random() * indexIcon);
 const linkImg = `./img/${icons[randomIndex]}.svg`;
 // const linkImg = "./img/" + icons[randomIndex] + ".svg";
 iconImage.src = linkImg;
-console.log(linkImg);
 
 // Exercice 11 : Optionnel
 // Insérez votre code ici
+
+const iconSelect = document.getElementById("iconSelect");
+const changIcon = document.getElementById("changeIcon");
+
+function myFonction() {
+  const iconValue = iconSelect.value;
+
+  if (iconValue) {
+    iconImage.src = `./img/${iconValue}.svg`;
+  }
+}
+
+changIcon.addEventListener("click", () => {
+  myFonction();
+});
